@@ -1,0 +1,13 @@
+main:
+  - title: "Inicio"
+    url: /
+  - title: "CV"
+    url: /cv/
+  - title: "Acústica"
+    url: /categories/#acústica
+  - title: "Electrónica"
+    url: /categories/#electrónica
+  - title: "Programación"
+    url: /categories/#programación
+  - title: "Investigación"
+    url: /investigacion/

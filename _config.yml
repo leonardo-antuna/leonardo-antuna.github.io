@@ -1,0 +1,74 @@
+title: Leonardo Antuña
+description: >-
+  Ingeniero de Sonido especializado en acústica arquitectónica, control de ruido y análisis de datos.
+# twitter_username: username  <-- Comentado para limpiar
+github_username: leonardo-antuna
+minimal_mistakes_skin: "dark"
+search: true
+
+# Build settings
+markdown: kramdown
+remote_theme: mmistakes/minimal-mistakes
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+timezone: America/Argentina/Buenos_Aires
+
+include:
+  - _pages
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+author:
+  name    : "Leonardo Antuña"
+  avatar  : "/assets/images/tu-foto.jpg"
+  bio     : "Ingeniero de Sonido con experiencia como Técnico Acústico. Especializado en acústica arquitectónica, control de ruido y simulación."
+  location: "Ezeiza, Buenos Aires"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/leonardo-antuña-aa2437276"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/leonardo-antuna"
+    # Email eliminado por privacidad
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/leonardo-antuna"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/leonardo-antuña-aa2437276"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
