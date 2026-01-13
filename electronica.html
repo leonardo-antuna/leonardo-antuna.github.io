@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Proyectos de electrónica de audio de Leonardo Antuña: Diseño de pedales de efectos analógicos, circuitos JFET/BJT y prototipado de hardware.">
+    
+    <title>Proyectos de Electrónica | Leonardo Antuña</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        .single-project-grid {
+            grid-template-columns: 1fr !important;
+            max-width: 1000px !important;
+        }
+        
+        .single-project-grid .project-image.main-img {
+            height: 400px;
+            background-color: #020617;
+        }
+        
+        /* Asegura que los esquemáticos se vean completos sin recortarse */
+        .project-image img {
+            object-fit: contain !important;
+        }
+
+        @media (max-width: 768px) {
+            .single-project-grid .project-image.main-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-elec"> 
+
+    <nav class="navbar">
+        <div class="logo">Leonardo Antuña</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="tesis.html">Tesis</a></li>
+            <li class="dropdown">
+                <a href="#">Proyectos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="acustica.html">Acústica</a></li>
+                    <li><a href="programacion.html">Programación</a></li>
+                    <li><a href="electronica.html" class="active">Electrónica</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: auto; padding-top: 150px; padding-bottom: 30px;">
+        <div class="hero-content scroll-element fade-in-up" style="text-align: center;">
+            <span class="tag" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; margin-bottom: 15px; display: inline-block;">Hardware & Audio FX</span>
+            <h1>Diseño Electrónico</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">
+                Prototipado de hardware, diseño de circuitos analógicos y pedales de efectos.
+            </p>
+        </div>
+    </header>
+
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="projects-grid single-project-grid scroll-element fade-in-up">
+
+            <article class="project-card">
+                
+                <div class="project-image main-img">
+                    <img src="assets/elect2.jpg" 
+                         alt="Diagrama Circuital del Pedal" 
+                         onclick="openModal(this)" 
+                         data-caption="Esquemático completo del circuito: Etapa de entrada JFET, división de bandas y etapas de distorsión independientes."
+                         onerror="this.src='https://via.placeholder.com/1000x500/0f172a/fbbf24?text=Esquematico+Circuito'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag" style="color: #fbbf24;">Analógico</span>
+                        <span class="mini-tag" style="color: #fbbf24;">Audio FX</span>
+                        <span class="mini-tag" style="color: #fbbf24;">JFET/BJT</span>
+                    </div>
+                    
+                    <h3 style="font-size: 1.8rem; margin-top: 10px;">Diseño de Pedal de Distorsión Multibanda</h3>
+                    
+                    <p style="font-size: 1rem;">Diseño y prototipado de un pedal de efectos para guitarra eléctrica con procesamiento de señal dividido por bandas de frecuencia. El circuito interpreta la guitarra como un generador de tensión (50-500 mVp) con impedancia variable (3-30 kΩ) y adapta la señal para su posterior procesamiento paralelo.</p>
+                    
+                    <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <h4 style="color: #fbbf24; margin-bottom: 10px;">Etapa de Entrada:</h4>
+                            <p style="font-size: 0.95rem; color: #94a3b8; margin-bottom: 15px;">
+                                Se implementó un <strong>Buffer JFET</strong> de alta impedancia de entrada para adaptar la señal del instrumento sin pérdida de agudos ("Tone Sucking") y preparar la señal para las etapas de división.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="color: #fbbf24; margin-bottom: 10px;">Procesamiento Multibanda:</h4>
+                            <ul style="font-size: 0.95rem; color: #94a3b8; list-style: none;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-wave-square" style="color: #fbbf24; margin-right: 8px;"></i> <strong>Agudos:</strong> Distorsión por recorte de diodos (Clipping).</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-wave-square" style="color: #fbbf24; margin-right: 8px;"></i> <strong>Medios:</strong> Saturación natural de transistor JFET.</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-wave-square" style="color: #fbbf24; margin-right: 8px;"></i> <strong>Graves:</strong> Distorsión por corte de transistor BJT.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.9rem; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                        <strong>Filosofía de Diseño:</strong> Cada rama cuenta con su propia etapa de ganancia variable PNP y filtrado específico, permitiendo esculpir el tono de manera quirúrgica al tratar cada rango de frecuencias con la topología de distorsión que mejor le sienta armónicamente.
+                    </p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/elect1.jpg" 
+                         alt="Diagrama en Bloques" 
+                         onclick="openModal(this)"
+                         data-caption="Diagrama en bloques del flujo de señal: Buffer -> División de Frecuencias -> Distorsiones Específicas."
+                         onerror="this.src='https://via.placeholder.com/500x300/1e293b/fbbf24?text=Diagrama+Bloques'">
+                    
+                    <img src="assets/elect3.jpg" 
+                         alt="Medición en Osciloscopio" 
+                         onclick="openModal(this)"
+                         data-caption="Verificación en laboratorio: Formas de onda de las distintas distorsiones visualizadas en osciloscopio."
+                         onerror="this.src='https://via.placeholder.com/500x300/1e293b/fbbf24?text=Osciloscopio'">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Leonardo Antuña</h3>
+            <p>Ingeniería de Sonido | Acústica | Desarrollo</p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/leonardo-antuña-aa2437276" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://leonardo-antuna.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:leonardo.antuna@yahoo.com.ar"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Diseñado por Leonardo Antuña.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

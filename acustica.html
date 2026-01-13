@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Portafolio de proyectos de acústica arquitectónica de Leonardo Antuña: Diseño de salas, aislamiento sonoro, simulación EASE y mediciones normativas.">
+    
+    <title>Proyectos Acústicos | Leonardo Antuña</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body class="bg-acustica">
+
+    <nav class="navbar">
+        <div class="logo">Leonardo Antuña</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="tesis.html">Tesis</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Proyectos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="acustica.html" class="active">Acústica</a></li>
+                    <li><a href="programacion.html">Programación</a></li>
+                    <li><a href="electronica.html">Electrónica</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: auto; padding-top: 150px; padding-bottom: 30px;">
+        <div class="hero-content scroll-element fade-in-up" style="text-align: center;">
+            <span class="tag" style="background: rgba(8, 145, 178, 0.2); color: #22d3ee; margin-bottom: 15px; display: inline-block;">Portfolio Técnico</span>
+            <h1>Proyectos de Acústica</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">
+                Diseño de salas, simulación computacional y mediciones normativas.
+            </p>
+        </div>
+    </header>
+
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="projects-grid scroll-element fade-in-up">
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/caracas_1.jpeg" 
+                         alt="Aula Magna Caracas Principal" 
+                         onclick="openModal(this)" 
+                         data-caption="Vista del escenario del Aula Magna rediseñada como sala sinfónica."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Aula+Magna+1'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">Arquitectónica</span>
+                        <span class="mini-tag">Sala Sinfónica</span>
+                    </div>
+                    <h3>Rediseño Auditorio Aula Magna (Caracas)</h3>
+                    <p>Rediseño integral del auditorio de la Universidad de Caracas como sala sinfónica, adaptándose a su área original y fuentes de ruido. Con capacidad para 1334 espectadores y 84 músicos, se calcularon parámetros como TR (Sabine) e ITDG para la selección de materiales según el código de edificación local.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/caracas_2.png" 
+                         alt="Detalle planos" 
+                         onclick="openModal(this)"
+                         data-caption="Plano de planta: distribución de butacas y análisis de isópticas."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Plano'">
+                    
+                    <img src="assets/caracas_3.png" 
+                         alt="Análisis primeras reflexiones" 
+                         onclick="openModal(this)"
+                         data-caption="Análisis de cobertura de primeras reflexiones y acústica geométrica."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Reflexiones'">
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/control_1.jpg" 
+                         alt="Control Room Principal" 
+                         onclick="openModal(this)"
+                         data-caption="Vista renderizada del Control Room diseño Ambechoic."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Control+Room+1'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">Ambechoic</span>
+                        <span class="mini-tag">Aislamiento</span>
+                    </div>
+                    <h3>Diseño de Control Room Ambechoic</h3>
+                    <p>Diseño para 8 personas siguiendo normativas DISPO (CABA). El proyecto abarca aislamiento integral (box-in-a-box), HVAC, monitoreo 3D/Binaural y simulaciones acústicas (geométrica y ondulatoria), cumpliendo con las recomendaciones de la AES para tiempos de reverberación.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/control_2.png" 
+                         alt="Plano y distribución asientos" 
+                         onclick="openModal(this)"
+                         data-caption="Plano de arquitectura interior y ubicación del sweet spot."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Plano'">
+                    
+                    <img src="assets/control_3.png" 
+                         alt="Simulación Modal" 
+                         onclick="openModal(this)"
+                         data-caption="Análisis de Elementos Finitos (FEM) para predicción de modos propios."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Simulacion'">
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/helmholtz_1.jpg" 
+                         alt="Resonador Helmholtz" 
+                         onclick="openModal(this)"
+                         data-caption="Prototipo final del resonador de Helmholtz construido."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Resonador+1'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">Investigación</span>
+                        <span class="mini-tag">Control Modal</span>
+                    </div>
+                    <h3>Diseño y Construcción: Resonador de Helmholtz</h3>
+                    <p>Basado en la teoría de Cox y D'Antonio. Se midió el coeficiente de absorción estadística, logrando un máximo en la banda de 630 Hz. Los resultados mostraron una disminución efectiva de los tiempos de reverberación y un mayor control modal (reducción del desvío estándar en 160 Hz).</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/helmholtz_2.jpg" 
+                         alt="Curva Absorción" 
+                         onclick="openModal(this)"
+                         data-caption="Gráfico comparativo: Absorción Teórica vs. Medida."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Curva+Abs'">
+                    
+                    <img src="assets/helmholtz_3.jpg" 
+                         alt="Construcción" 
+                         onclick="openModal(this)"
+                         data-caption="Proceso de construcción y perforación del panel frontal."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Prototipo'">
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/musik_1.jpg" 
+                         alt="Musikverein EASE" 
+                         onclick="openModal(this)"
+                         data-caption="Modelo acústico 3D realizado en software EASE."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Musikverein+EASE'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">EASE</span>
+                        <span class="mini-tag">Simulación</span>
+                    </div>
+                    <h3>Simulación Acústica del Musikverein (Viena)</h3>
+                    <p>Modelado computacional del Golden Hall y cálculo de parámetros (EDT, STI, Alcons, C80). Tras el ajuste, se lograron magnitudes similares a las mediciones in-situ, con diferencias menores a 1 JND para EDT y D/R, y menores a 2 JND para STI.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/musik_2.jpg" 
+                         alt="Modelo EASE" 
+                         onclick="openModal(this)"
+                         data-caption="Mapa de colores (Mapeo) de distribución de SPL directo."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Mapa+SPL'">
+                    
+                    <img src="assets/musik_3.jpg" 
+                         alt="Comparación simulación y mediciones in-situ" 
+                         onclick="openModal(this)"
+                         data-caption="Análisis estadístico: Comparación Simulación vs. Realidad."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Grafico'">
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/cinema_1.jpg" 
+                         alt="Home Cinema Diseño" 
+                         onclick="openModal(this)"
+                         data-caption="Vista de la sala de escucha crítica con tratamiento difuso."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Home+Cinema'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">DUD</span>
+                        <span class="mini-tag">Difusores</span>
+                    </div>
+                    <h3>Diseño de Sala de Escucha Crítica (Home Cinema)</h3>
+                    <p>Diseño de recinto (7x6.5x5.5m) utilizando el esquema de Distribución Uniforme de Difusores (DUD). Se implementaron difusores numéricos curvos como revestimiento mayoritario, sin confinamiento zonal, para lograr un campo sonoro difuso y envolvente.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/cinema_2.jpg" 
+                         alt="Modelo EASE" 
+                         onclick="openModal(this)"
+                         data-caption="Detalle del difusor numérico curvo diseñado."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Difusores'">
+                    
+                    <img src="assets/cinema_3.jpg" 
+                         alt="Cálculo final" 
+                         onclick="openModal(this)"
+                         data-caption="Esquema de distribución DUD en planta."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Plano+DUD'">
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image main-img">
+                    <img src="assets/medicion_1.jpeg" 
+                         alt="Medición Acústica" 
+                         onclick="openModal(this)"
+                         data-caption="Setup de medición con sonómetro integrador Clase 1."
+                         onerror="this.src='https://via.placeholder.com/600x400/0f172a/38bdf8?text=Sonometro'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag">Ley 1540</span>
+                        <span class="mini-tag">IRAM</span>
+                    </div>
+                    <h3>Mediciones como Técnico Acústico</h3>
+                    <p>Relevamiento de ruido interior y exterior según Decreto 740 (Ley 1540 CABA) y normas IRAM. Realización de informes de impacto acústico para eventos al aire libre cumpliendo con los requisitos exigidos por la DGEVA.</p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/medicion_2.jpeg" 
+                         alt="Medición exteriores" 
+                         onclick="openModal(this)"
+                         data-caption="Gráfico de espectro de ruido (Bandas de tercio de octava)."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Grafico+Espectro'">
+                    
+                    <img src="assets/medicion_3.jpeg" 
+                         alt="Medición local comercial" 
+                         onclick="openModal(this)"
+                         data-caption="Medición de ruido de fondo en local comercial."
+                         onerror="this.src='https://via.placeholder.com/300x300/1e293b/94a3b8?text=Setup+Campo'">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Leonardo Antuña</h3>
+            <p>Ingeniería de Sonido | Acústica | Desarrollo</p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/leonardo-antuña-aa2437276" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://leonardo-antuna.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:leonardo.antuna@yahoo.com.ar"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Diseñado por Leonardo Antuña.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

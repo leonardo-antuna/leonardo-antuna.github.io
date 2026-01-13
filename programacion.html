@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Proyectos de desarrollo de software de audio y DSP de Leonardo Antuña: Herramientas de medición acústica en Python, procesamiento de señales y aplicaciones Open Source.">
+    
+    <title>Proyectos de Programación | Leonardo Antuña</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        .single-project-grid {
+            grid-template-columns: 1fr !important;
+            max-width: 1000px !important;
+        }
+        
+        .single-project-grid .project-image.main-img {
+            height: 400px;
+        }
+        
+        @media (max-width: 768px) {
+            .single-project-grid .project-image.main-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dev">
+
+    <nav class="navbar">
+        <div class="logo">Leonardo Antuña</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="tesis.html">Tesis</a></li>
+            <li class="dropdown">
+                <a href="#">Proyectos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="acustica.html">Acústica</a></li>
+                    <li><a href="programacion.html" class="active">Programación</a></li>
+                    <li><a href="electronica.html">Electrónica</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: auto; padding-top: 150px; padding-bottom: 30px;">
+        <div class="hero-content scroll-element fade-in-up" style="text-align: center;">
+            <span class="tag" style="background: rgba(16, 185, 129, 0.2); color: #34d399; margin-bottom: 15px; display: inline-block;">Software & DSP</span>
+            <h1>Desarrollo de Software</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">
+                Herramientas de procesamiento digital de señales y aplicaciones de audio Open Source.
+            </p>
+        </div>
+    </header>
+
+    <section class="section-padding" style="padding-top: 0;">
+        <div class="projects-grid single-project-grid scroll-element fade-in-up">
+
+            <article class="project-card">
+                
+                <div class="project-image main-img">
+                    <img src="assets/python_gui1.jpg" 
+                         alt="Validación y Comparativa de Resultados" 
+                         onclick="openModal(this)" 
+                         data-caption="Gráficos de validación: Comparativa de valores calculados (Propio vs. Aurora vs. EASERA) demostrando alta precisión."
+                         onerror="this.src='https://via.placeholder.com/1000x500/0f172a/34d399?text=Validacion+Resultados'">
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="mini-tag" style="color: #34d399;">Python/DSP</span>
+                        <span class="mini-tag" style="color: #34d399;">Open Source</span>
+                        <span class="mini-tag" style="color: #34d399;">ISO 3382</span>
+                    </div>
+                    
+                    <h3 style="font-size: 1.8rem; margin-top: 10px;">Software de Procesamiento de Respuestas al Impulso</h3>
+                    
+                    <p style="font-size: 1rem;">Desarrollo de un software de código abierto con interfaz gráfica (GUI) diseñado para procesar registros de audio obtenidos mediante barridos sinusoidales (Sine Sweeps) y calcular sus respuestas al impulso.</p>
+                    
+                    <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <h4 style="color: #34d399; margin-bottom: 10px;">Características Principales:</h4>
+                            <ul style="font-size: 0.95rem; color: #94a3b8; list-style: none;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #34d399; margin-right: 8px;"></i> Post-procesamiento y linealización del decaimiento.</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #34d399; margin-right: 8px;"></i> Suavizado configurable: Schroeder (integración inversa) o Filtro de Media Móvil (MMF).</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #34d399; margin-right: 8px;"></i> Filtrado digital por octavas y tercios de octava (normas IEC).</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #34d399; margin-bottom: 10px;">Cálculo de Parámetros (ISO 3382):</h4>
+                            <ul style="font-size: 0.95rem; color: #94a3b8; list-style: none;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-chart-bar" style="color: #34d399; margin-right: 8px;"></i> T20, T30 y EDT (Tiempo de Reverberación).</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-chart-bar" style="color: #34d399; margin-right: 8px;"></i> C50, C80 (Claridad) y TT.</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-chart-bar" style="color: #34d399; margin-right: 8px;"></i> IACCE (Correlación Cruzada Interaural).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.9rem; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px;">
+                        <strong>Validación de Resultados:</strong> Se realizó una comparativa exhaustiva contra softwares comerciales de referencia (Aurora y EASERA). Utilizando el método de suavizado de Schroeder, el código propio mostró una diferencia menor al <strong>9.7%</strong> en los parámetros temporales (EDT, T20, T30) a lo largo de las bandas analizadas, validando su precisión para uso académico y profesional.
+                    </p>
+                </div>
+
+                <div class="project-gallery">
+                    <img src="assets/python_gui2.jpg" 
+                         alt="Diagrama en Bloques" 
+                         onclick="openModal(this)"
+                         data-caption="Diagrama en bloques describiendo el flujo de señal y las etapas de procesamiento digital del software."
+                         onerror="this.src='https://via.placeholder.com/500x300/064e3b/34d399?text=Diagrama+Bloques'">
+                    
+                    <img src="assets/python_gui3.jpg" 
+                         alt="Interfaz Gráfica del Software" 
+                         onclick="openModal(this)"
+                         data-caption="Interfaz gráfica de usuario (GUI) desarrollada para la carga y procesamiento de Sine Sweeps."
+                         onerror="this.src='https://via.placeholder.com/500x300/064e3b/34d399?text=GUI+Software'">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Leonardo Antuña</h3>
+            <p>Ingeniería de Sonido | Acústica | Desarrollo</p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/leonardo-antuña-aa2437276" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://leonardo-antuna.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:leonardo.antuna@yahoo.com.ar"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Diseñado por Leonardo Antuña.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

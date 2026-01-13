@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Portafolio de Leonardo Antuña, Ingeniero de Sonido especializado en acústica arquitectónica, procesamiento de señales (DSP) y desarrollo de software de audio.">
+    
+    <title>Portafolio Profesional | Leonardo Antuña</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        .roadmap-section {
+            position: relative; 
+            z-index: 1; /* Para estar sobre la animación de fondo */
+        }
+        .roadmap-container {
+            max-width: 1100px; 
+            margin: 0 auto;
+        }
+        .roadmap-title {
+            margin-bottom: 50px;
+        }
+    </style>
+    
+</head>
+<body class="bg-home">
+
+    <nav class="navbar">
+        <div class="logo">Leonardo Antuña</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="tesis.html">Tesis</a></li>
+            <li class="dropdown">
+                <a href="#">Proyectos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="acustica.html">Acústica</a></li>
+                    <li><a href="programacion.html">Programación</a></li>
+                    <li><a href="electronica.html">Electrónica</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-split scroll-element fade-in-up">
+            
+            <div class="hero-text">
+                <span class="greeting">¡Hola! Soy</span>
+                <h1 class="name">Leonardo Antuña</h1>
+                <h2 class="role">Ingeniero de Sonido</h2>
+                <p>Interesado en la acústica arquitectónica, control de ruido y programación. Te invito a ver mi portfolio profesional.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#inicio-contenido" class="btn primary">Ver Portafolio</a>
+                    <a href="cv.html" class="btn secondary">Ver CV</a>
+                </div>
+            </div>
+    
+            <div class="hero-image-container">
+                <div class="img-wrapper">
+                    <img src="assets/perfil.jpg" alt="Leonardo Antuña" class="profile-img">
+                </div>
+            </div>
+    
+        </div>
+    
+        <a href="#inicio-contenido" class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+
+    <section id="inicio-contenido" class="section-padding">
+        <h2 class="section-title scroll-element fade-in">Áreas de Trabajo</h2>
+        
+        <div class="carousel-container scroll-element fade-in-up">
+            <button class="carousel-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    
+                    <li class="carousel-slide current-slide">
+                        <div class="card card-acustica">
+                            <i class="fas fa-wave-square card-icon"></i>
+                            <h3>Acústica</h3>
+                            <p>6 proyectos: Salas, mediciones y simulación.</p>
+                            <a href="acustica.html" class="card-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="card card-prog">
+                            <i class="fas fa-code card-icon"></i>
+                            <h3>Programación</h3>
+                            <p>Desarrollo de software DSP y herramientas.</p>
+                            <a href="programacion.html" class="card-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="card card-elec">
+                            <i class="fas fa-microchip card-icon"></i>
+                            <h3>Electrónica</h3>
+                            <p>Hardware analógico y digital aplicado al audio.</p>
+                            <a href="electronica.html" class="card-link">Explorar <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="card card-tesis">
+                            <i class="fas fa-book-open card-icon"></i>
+                            <h3>Investigación</h3>
+                            <p>Tesis de grado y papers académicos.</p>
+                            <a href="tesis.html" class="card-link">Leer Tesis <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <button class="carousel-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="section-padding roadmap-section">
+        <div class="scroll-element fade-in-up roadmap-container">
+            
+            <h2 class="section-title roadmap-title">
+                <i class="fas fa-route"></i> Roadmap: El Siguiente Nivel
+            </h2>
+
+            <div class="roadmap-grid">
+                
+                <div class="roadmap-card card-learning">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Profundización en C++ y Embedded</h3>
+                    <p>
+                        Actualmente me encuentro perfeccionando mis habilidades en C++ moderno y sistemas embebidos para llevar el procesamiento de audio al hardware dedicado.
+                    </p>
+                    <ul class="tech-list">
+                        <li><strong>C++ Moderno:</strong> Formación intensiva siguiendo el estándar de <em>LearnCpp.com</em>.</li>
+                        <li><strong>STM32 & ARM:</strong> Cursos de especialización en arquitectura ARM y programación práctica de STM32 (ADOM Ingeniería).</li>
+                    </ul>
+                </div>
+
+                <div class="roadmap-card card-goals">
+                    <div class="card-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Objetivos de Desarrollo</h3>
+                    <p>
+                        La meta es migrar las soluciones de software y analógicas actuales hacia arquitecturas digitales de alto rendimiento:
+                    </p>
+                    <ul class="tech-list">
+                        <li><strong>Portabilidad DSP:</strong> Reescribir el software de medición acústica (Python) a <strong>C++</strong> para optimizar el rendimiento en tiempo real.</li>
+                        <li><strong>Pedal Digital:</strong> Implementar la distorsión multibanda en un <strong>STM32</strong>, digitalizando el procesamiento de señal analógico.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Leonardo Antuña</h3>
+            <p>Ingeniería de Sonido | Acústica | Desarrollo</p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/leonardo-antuña-aa2437276" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://leonardo-antuna.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:leonardo.antuna@yahoo.com.ar"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Diseñado por Leonardo Antuña.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

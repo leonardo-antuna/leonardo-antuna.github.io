@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Tesis de Ingeniería de Sonido: Correlación entre parámetros psicoacústicos y molestia percibida en cabinas de aeronaves (A320, A321, A350).">
+    
+    <title>Tesis: Ruido en Aeronaves | Leonardo Antuña</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos específicos para Tesis */
+        .graphic-container {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+        }
+        
+        .graphic-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .graphic-container:hover img {
+            transform: scale(1.02);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Glosario */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .glossary-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary-color);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .glossary-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .glossary-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .glossary-card p {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        /* Resultados */
+        .results-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .result-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .result-item h4 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .result-item i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-tesis">
+
+    <nav class="navbar">
+        <div class="logo">Leonardo Antuña</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="tesis.html" class="active">Tesis</a></li>
+            <li class="dropdown">
+                <a href="#">Proyectos <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="acustica.html">Acústica</a></li>
+                    <li><a href="programacion.html">Programación</a></li>
+                    <li><a href="electronica.html">Electrónica</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: auto; padding-top: 150px; padding-bottom: 60px;">
+        <div class="hero-content scroll-element fade-in-up" style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <span class="tag" style="margin-bottom: 20px; display: inline-block; background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);">Investigación Académica</span>
+            
+            <h1 style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 20px;">
+                Correlación entre parámetros Psicoacústicos y Molestia Percibida en Cabinas de Aeronaves
+            </h1>
+            
+            <p style="font-size: 1.1rem; color: var(--secondary-color); margin: 0 auto 30px auto; max-width: 700px;">
+                Un estudio en profundidad sobre la percepción del ruido por parte de pilotos y tripulantes en aeronaves modernas (A320 Neo, A321, A350-900).
+            </p>
+            
+            <a href="https://biblio.untref.edu.ar/cgi-bin/koha/opac-detail.pl?biblionumber=79311" target="_blank" rel="noopener noreferrer" class="btn primary">
+                <i class="fas fa-university"></i> Ver en Repositorio UNTREF
+            </a>
+        </div>
+    </header>
+
+    <section class="section-padding" style="background: rgba(0,0,0,0.2);">
+        <div class="timeline-content scroll-element fade-in" style="max-width: 1000px; margin: 0 auto;">
+            <h2 style="color: var(--primary-color); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
+                <i class="fas fa-bullseye"></i> Objetivo de la Investigación
+            </h2>
+            <p style="font-size: 1.1rem; color: #e2e8f0;">
+                En esta investigación se evalúa la correlación entre los parámetros de caracterización del ruido en cabinas de aeronaves comerciales y la molestia percibida por pilotos y tripulantes. El objetivo principal fue determinar si las métricas tradicionales (como el L<sub>Aeq</sub>) resultan suficientes o si es necesario incorporar parámetros psicoacústicos para predecir con mayor precisión el confort acústico.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="scroll-element fade-in-up" style="max-width: 1000px; margin: 0 auto;">
+            <h2 class="section-title">Metodología Experimental</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px; align-items: center;">
+                <div>
+                    <h3 style="color: #fff; margin-bottom: 15px;"><i class="fas fa-cogs"></i> Diseño del Experimento</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 20px;">
+                        Se diseñó un sistema de adquisición de datos portátil y calibrado para operar en condiciones de vuelo real. El setup incluye micrófonos de medición clase 1, grabadoras digitales de alta resolución y sonómetros integradores.
+                    </p>
+                    <ul class="tech-list" style="color: #cbd5e1; list-style: inside;">
+                        <li><strong>Grabación:</strong> 48kHz / 24-bit.</li>
+                        <li><strong>Normativa:</strong> ISO 5129 (Acústica en cabinas).</li>
+                        <li><strong>Validación:</strong> Calibración in-situ pre y post vuelo.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="graphic-container" onclick="openModal(this.querySelector('img'))">
+                        <img src="assets/tesis_grafico1.jpg" alt="Diagrama de Bloques del Setup Experimental" data-caption="Diagrama de Bloques: Cadena de adquisición y procesamiento de señal.">
+                    </div>
+                    <div class="caption">Fig 1. Diagrama de bloques del sistema de medición.</div>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 60px;">
+                <h3 style="color: #fff; margin-bottom: 15px; text-align: center;"><i class="fas fa-map-marker-alt"></i> Puntos de Medición</h3>
+                <p style="color: #cbd5e1; text-align: center; max-width: 700px; margin: 0 auto 30px auto;">
+                    Las mediciones se realizaron en puntos estratégicos para capturar la variabilidad del campo sonoro: Cockpit (pilotos), Galley delantero y Galley trasero (tripulación de cabina).
+                </p>
+                
+                <div class="graphic-container" onclick="openModal(this.querySelector('img'))">
+                    <img src="assets/tesis_grafico3.jpg" alt="Posiciones de medición en la aeronave" data-caption="Planta de la aeronave indicando las posiciones de los micrófonos en cabina y cockpit.">
+                </div>
+                <div class="caption">Fig 2. Distribución espacial de los puntos de medición en la aeronave.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(0,0,0,0.3);">
+        <div class="scroll-element fade-in" style="max-width: 1000px; margin: 0 auto;">
+            <h2 class="section-title">Parámetros Analizados</h2>
+            <p style="text-align: center; color: #94a3b8; max-width: 700px; margin: 0 auto;">
+                Más allá de los decibeles, se analizaron métricas que describen <em>cómo</em> el oído humano percibe el sonido.
+            </p>
+
+            <div class="glossary-grid">
+                <div class="glossary-card">
+                    <h4>L<sub>Aeq</sub> / L<sub>Ceq</sub></h4>
+                    <p>Nivel de presión sonora continuo equivalente. Ponderación 'A' para respuesta humana general y 'C' para bajas frecuencias (ruido de motores).</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Loudness (Sonoridad)</h4>
+                    <p>Mide la intensidad subjetiva del sonido percibida por el oído. A diferencia del dB, considera el efecto de enmascaramiento espectral. (Unidad: Sone).</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Sharpness (Agudeza)</h4>
+                    <p>Sensación de "filo" o componente de alta frecuencia en el ruido. Fundamental para evaluar el ruido aerodinámico (silbidos). (Unidad: Acum).</p>
+                </div>
+                <div class="glossary-card">
+                    <h4>Roughness (Rugosidad)</h4>
+                    <p>Describe la modulación rápida de amplitud (zumbidos ásperos). Típico en ruidos de turbinas y vibraciones mecánicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="padding-bottom: 100px;">
+        <div class="timeline-content scroll-element fade-in-up" style="max-width: 1000px; margin: 0 auto; border-color: var(--primary-color);">
+            <h2 style="color: var(--primary-color); margin-bottom: 30px;">
+                <i class="fas fa-clipboard-check"></i> Resultados y Conclusiones
+            </h2>
+            
+            <div style="margin-bottom: 40px;">
+                <div class="graphic-container" onclick="openModal(this.querySelector('img'))">
+                    <img src="assets/tesis_grafico2.jpg" alt="Gráfico comparativo de niveles LAeq y LCeq" data-caption="Niveles medios medidos (LAeq y LCeq) según fase de vuelo y posición.">
+                </div>
+                <div class="caption">Fig 3. Comparativa de niveles energéticos por aeronave.</div>
+            </div>
+
+            <div class="results-container">
+                <div class="result-item">
+                    <h4><i class="fas fa-check-circle"></i> Correlación Fuerte</h4>
+                    <p style="color: #cbd5e1;">El análisis estadístico reveló una <strong>relación monotónica positiva</strong> entre la molestia percibida y los parámetros de <strong>Sonoridad</strong> y <strong>Agudeza</strong>. Esto indica que el contenido espectral juega un rol fundamental en la molestia, complementando la información del nivel de presión sonora global.</p>
+                </div>
+
+                <div class="result-item">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Zonas Críticas</h4>
+                    <p style="color: #cbd5e1;">La mayoría de los encuestados señaló la <strong>parte trasera de la cabina</strong> como la zona más conflictiva. Se encontró evidencia estadísticamente significativa de que ciertas fuentes, como las <strong>turbinas</strong> y el ruido aerodinámico, generan mayor molestia en esta sección.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="font-size: 0.95rem; color: #cbd5e1;">
+                    <em>* Para profundizar en estos hallazgos, se llevaron a cabo análisis de regresión lineal, validando la importancia de incluir métricas psicoacústicas en el diseño de futuras cabinas.</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Leonardo Antuña</h3>
+            <p>Ingeniería de Sonido | Acústica | Desarrollo</p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/leonardo-antuña-aa2437276" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://leonardo-antuna.github.io" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:leonardo.antuna@yahoo.com.ar"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 - Diseñado por Leonardo Antuña.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
